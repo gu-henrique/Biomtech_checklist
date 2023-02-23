@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--======ICON ABA ======-->
+    <link rel="shortcut icon" href="/check-list/img/Logo.ico" type="image/x-icon">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+    <title>Check Home | biomteh</title> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <a href="/check-list/index.html">
+                    <img src="/check-list/img/Logo.png" alt="">
+                    </a>
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Biomtech</span>
+                    <span class="profession">Seja bem-vindo!</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Procurar...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-calendar-check icon' ></i>
+                            <span class="text nav-text">Check List</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="/Todo/index.html">                            
+                            <i class='bx bx-user-check icon'></i>
+                            <span class="text nav-text">ToDo List</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/calendar/index.html">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Calendário</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Sair</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="home">
+        
+        <form action="#">
+            <div class="conteiner">
+                <h3>faceLock</h3>                
+                <!--==== ESCOLHER PEÇA ===-->
+                <div class="choose">
+                
+                <strong class="strong-1">Conferência interna.</strong>
+        
+                <!--==== CHECK LIST ===-->    
+                <div id="checklist"> 
+                    <ul>
+                        <li class="check">                            
+                            <input type="checkbox" name="r" value="1" id="01" class="custom-checkbox" checked>
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="01">Inspeção caixa</label>                            
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="2" id="02" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="02">Inspeção isopor</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="3" id="03" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            
+                            <label for="03">Inspeção Visual</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="4" id="04" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="04">Kit Parafusos</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="5" id="05" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="05">Kit Frontal</label>
+                        </li>
+                        <li class="check">
+                        <input type="checkbox" name="r" value="6" id="06" class="custom-checkbox">
+                        <i class='bx bxs-check-circle icon'></i>
+                        <label for="06">Kit Traseira</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="7" id="07" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="07">Borracha parte frontal</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="8" id="08" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="08">Borracha parte traseira</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="9" id="09" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="09">Parte mecanica</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="10" id="10" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="10">Bateria</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="11" id="11" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="11">Fonte  9v 1a</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="12" id="12" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="12">Contato deslizante</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="13" id="13" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="13">Cartão de acesso</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="14" id="14" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="14">Cabo de dados</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="15" id="15" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="15">Chicote frontal</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="16" id="16" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="16">Chicote bateria</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="17" id="17" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="17">Antena wi fi</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="18" id="18" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="18">Fixador tambor chave</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="19" id="19" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="19">Tambor</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="20" id="20" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="20">Chave</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="21" id="21" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="21">Linguetas</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="22" id="22" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="22">Manual usuario</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="23" id="23" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="23">Gabarito</label>
+                        </li>
+
+
+                        <strong class="strong-2">Testes Software</strong>
+
+
+                        <li class="check">
+                            <input type="checkbox" name="r" value="24" id="24" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="24">Atualização de firmware</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="25" id="25" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="25">Teste chicote frontal </label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="26" id="26" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="26">Teste chicote  bateria</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="27" id="27" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="27">Conexão wi-fi</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="29" id="29" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="29">Teste touchscreen</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="30" id="30" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="30">Teste camêra iv</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="31" id="31" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="31">Teste de camêra colorida</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="32" id="32" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="32">Spekear </label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="33" id="33" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="32">Cadastro de ususario</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="34" id="34" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="34">Teste de acionamento mec.</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="35" id="35" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="35">Teste de chave</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="36" id="36" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="36">Teste cartão de acesso</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="37" id="37" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="37">Teste senha pin </label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="38" id="38" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="38">Teste reconhecimento facial </label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="39" id="39" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="39">Teste fonte 9v 1a</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="40" id="40" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="40">Teste bateria</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="41" id="41" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="41">Exclusão de usuario</label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="42" id="42" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="42">Reset de fabrica </label>
+                        </li>
+                        <li class="check">
+                            <input type="checkbox" name="r" value="43" id="43" class="custom-checkbox">
+                            <i class='bx bxs-check-circle icon'></i>
+                            <label for="43">Inversão maçaneta</label>
+                        </li>
+
+                        <!--insirir img-->
+
+                        <li class="img">
+                        
+                            <input class="file-input" type="file" name="file" hidden>
+                            <i class="fas fa-cloud-upload-alt icon-1"></i>
+
+                            <label for="file-input">Upload de imagem.</label>
+                          
+                          <section class="progress-area"></section>
+                          <section class="uploaded-area"></section>
+                        
+                        </li>
+                </ul>
+                   
+                <!--insirir OBS-->
+                    <div class="notes">
+                        <textarea name="" id="" placeholder="Anotações..."></textarea>
+                    </div>
+
+                    
+                  
+                    <!--==DOWNLOAD==-->
+
+                            <button class="download-btn">
+                                <i class='bx bxs-download icon' ></i>
+                                <span class="text">Baixar Arquivos</span>
+                            </button>
+                        </div>
+                     </div> 
+                </div>    
+    
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+
+const textarea = document.querySelector("textarea");
+      textarea.addEventListener("keyup", e =>{
+        textarea.style.height = "63px";
+        let scHeight = e.target.scrollHeight;
+        textarea.style.height = `${scHeight}px`;
+      });
+
+    </script>
+    
+
+</body>
+</html>
