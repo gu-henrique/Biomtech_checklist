@@ -1,4 +1,4 @@
-const form = document.querySelector(".img"),
+const form = document.querySelector("form"),
 fileInput = document.querySelector(".file-input"),
 progressArea = document.querySelector(".progress-area"),
 uploadedArea = document.querySelector(".uploaded-area");
