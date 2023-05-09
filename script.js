@@ -1,4 +1,74 @@
 
+//-- DOWNLOAD DO FORM --
+
+// Botão de download
+const downloadBtn = document.querySelector(".download-btn");
+
+// URL do servidor que processa os dados do formulário e gera o PDF
+const fileLink = "https://docraptor.com/";
+
+// Função para enviar os dados do formulário e receber o PDF gerado
+async function downloadPDF() {
+  try {
+    // Obtém os dados do formulário
+    const form = document.querySelector("form");
+    const formData = new FormData(form);
+
+    // Envia os dados do formulário para o servidor e recebe o PDF gerado em resposta
+    const response = await fetch(fileLink, {
+      method: "POST",
+      body: formData,
+    });
+    const pdfBlob = await response.blob();
+
+    // Cria um link de download para o PDF gerado
+    const url = window.URL.createObjectURL(pdfBlob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "formulario.pdf";
+
+    // Dispara o download e limpa a URL do objeto
+    link.click();
+    window.URL.revokeObjectURL(url);
+
+    // Atualiza o botão de download para permitir o download novamente
+    downloadBtn.classList.replace("timer", "disable-timer");
+    downloadBtn.innerHTML = `<i class='bx bxs-download icon'></i>
+                              <span class="text">Baixar Formulário em PDF</span>`;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Função para inicializar o temporizador do botão de download
+function initTimer() {
+  if (downloadBtn.classList.contains("disable-timer")) {
+    return downloadPDF();
+  }
+  let timer = downloadBtn.dataset.timer;
+  downloadBtn.classList.add("timer");
+  downloadBtn.innerHTML = `Seu download começará em <b>${timer}</b> segundos`;
+  const initCounter = setInterval(() => {
+    if (timer > 0) {
+      timer--;
+      return (downloadBtn.innerHTML = `Seu download começará em <b>${timer}</b> segundos`);
+    }
+    clearInterval(initCounter);
+    downloadPDF();
+    downloadBtn.innerText = "Baixando formulário...";
+    setTimeout(() => {
+      downloadBtn.classList.replace("timer", "disable-timer");
+      downloadBtn.innerHTML = `<i class='bx bxs-download icon'></i>
+                                <span class="text">Baixar Formulário em PDF</span>`;
+    }, 3000);
+  }, 1000);
+}
+
+// Evento de clique no botão de download
+downloadBtn.addEventListener("click", initTimer);
+
+
+
 
 
 
@@ -76,77 +146,5 @@ function uploadFile(file) {
   data.append('file', file);
   xhr.send(data);
 }
-
-
-
-//-- DOWNLOAD DO FORM --
-
-// Botão de download
-const downloadBtn = document.querySelector(".download-btn");
-
-// URL do servidor que processa os dados do formulário e gera o PDF
-const fileLink = "https://docraptor.com/";
-
-// Função para enviar os dados do formulário e receber o PDF gerado
-async function downloadPDF() {
-  try {
-    // Obtém os dados do formulário
-    const form = document.querySelector("form");
-    const formData = new FormData(form);
-
-    // Envia os dados do formulário para o servidor e recebe o PDF gerado em resposta
-    const response = await fetch(fileLink, {
-      method: "POST",
-      body: formData,
-    });
-    const pdfBlob = await response.blob();
-
-    // Cria um link de download para o PDF gerado
-    const url = window.URL.createObjectURL(pdfBlob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "formulario.pdf";
-
-    // Dispara o download e limpa a URL do objeto
-    link.click();
-    window.URL.revokeObjectURL(url);
-
-    // Atualiza o botão de download para permitir o download novamente
-    downloadBtn.classList.replace("timer", "disable-timer");
-    downloadBtn.innerHTML = `<i class='bx bxs-download icon'></i>
-                              <span class="text">Baixar Formulário em PDF</span>`;
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-
-
-// Função para inicializar o temporizador do botão de download
-function initTimer() {
-  if (downloadBtn.classList.contains("disable-timer")) {
-    return downloadPDF();
-  }
-  let timer = downloadBtn.dataset.timer;
-  downloadBtn.classList.add("timer");
-  downloadBtn.innerHTML = `Seu download começará em <b>${timer}</b> segundos`;
-  const initCounter = setInterval(() => {
-    if (timer > 0) {
-      timer--;
-      return (downloadBtn.innerHTML = `Seu download começará em <b>${timer}</b> segundos`);
-    }
-    clearInterval(initCounter);
-    downloadPDF();
-    downloadBtn.innerText = "Baixando formulário...";
-    setTimeout(() => {
-      downloadBtn.classList.replace("timer", "disable-timer");
-      downloadBtn.innerHTML = `<i class='bx bxs-download icon'></i>
-                                <span class="text">Baixar Formulário em PDF</span>`;
-    }, 3000);
-  }, 1000);
-}
-
-// Evento de clique no botão de download
-downloadBtn.addEventListener("click", initTimer);
 
 
